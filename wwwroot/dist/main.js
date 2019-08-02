@@ -97,14 +97,27 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
+/***/ "./src/es6codelib.js":
+/*!***************************!*\
+  !*** ./src/es6codelib.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return ES6Lib; });\nclass ES6Lib {\n  constructor() {\n    this.text = \"Data from ES6 class\";\n  }\n\n  getData() {\n    return this.text;\n  }\n\n}\n\n//# sourceURL=webpack:///./src/es6codelib.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {﻿\r\n__webpack_require__(/*! ./lib */ \"./src/lib.js\");\r\n\r\ndocument.getElementById(\"one\").innerHTML = getText();\r\n\r\n$('#two').html('What is the case—a fact—is the existence of atomic facts.');\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _es6codelib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./es6codelib */ \"./src/es6codelib.js\");\n__webpack_require__(/*! ./lib */ \"./src/lib.js\");\n\n\ndocument.getElementById(\"one\").innerHTML = getText();\n$('#two').html('What is the case—a fact—is the existence of atomic facts.');\nlet myES6Object = new _es6codelib__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n$('#three').html(myES6Object.getData());\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -115,7 +128,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {﻿\r\n__webpack_require__(/*! ./
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("﻿\r\ngetText = function () {\r\n    return \"The world is everything that is the case.\";\r\n}\n\n//# sourceURL=webpack:///./src/lib.js?");
+eval("getText = function () {\n  return \"The world is everything that is the case.\";\n};\n\n//# sourceURL=webpack:///./src/lib.js?");
 
 /***/ })
 

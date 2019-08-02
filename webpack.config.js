@@ -17,5 +17,10 @@ module.exports = {
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
         })
-    ]
+    ],
+    module: {
+        rules: [
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+        ]
+    }
 };
