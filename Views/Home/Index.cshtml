@@ -1,20 +1,32 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
 <html>
 <head>
-    <title>Webpack Simple</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link rel="stylesheet" href="~/dist/allstyles.css" />
+
 </head>
+<body class="container">
 
-<body> 
+    <h1>This is the entry page.</h1>
 
-    <h1>Red! I'm Seeing Red!</h1>
+    <br/><br /><br />
 
-    <p id="one"></p>
+    <div id="basicreactcomponent"></div>
 
-    <p id="two"></p>
+    <br /><br /><br />
 
-    <p id="three"></p>
+    <div id="reactcomponentwithapidata"></div>
+    
 
-    <script src="~/dist/main.js"></script>
+<script src="~/dist/bundle.js"></script>
 
 </body>
 </html>
