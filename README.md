@@ -8,7 +8,13 @@ rebuild solution
 
 open command line window and go to the directory that has the package.json in it
 
-type webpack on the command line 
+on the command line type: 
+
+```console
+npm install
+
+webpack
+```
 
 F5 in Visual Studio
 
