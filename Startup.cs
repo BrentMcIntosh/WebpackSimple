@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+﻿
+using Microsoft.AspNetCore.Builder;
+
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ASPNetCoreReact
@@ -11,7 +12,7 @@ namespace ASPNetCoreReact
             services.AddMvc();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
 
