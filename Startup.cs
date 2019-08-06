@@ -16,7 +16,6 @@ namespace ASPNetCoreReact
 
         public void Configure(IApplicationBuilder app)
         {
-
             app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
             {
                 HotModuleReplacement = true
