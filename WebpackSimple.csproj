@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="src\lib.js" />
+    <Content Include="app\lib.js" />
   </ItemGroup>
 
   <ItemGroup>

@@ -81,30 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./app/component.js":
+/*!**************************!*\
+  !*** ./app/component.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("﻿\r\n__webpack_require__(/*! ./lib */ \"./src/lib.js\");\r\n\r\ndocument.getElementById(\"skippy\").innerHTML = getText();\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n﻿\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ((text = 'Hello world') => {\r\n\r\n    const element = document.createElement('div');\r\n\r\n    element.innerHTML = text;\r\n\r\n    return element;\r\n});\n\n//# sourceURL=webpack:///./app/component.js?");
 
 /***/ }),
 
-/***/ "./src/lib.js":
-/*!********************!*\
-  !*** ./src/lib.js ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./app/index.js":
+/*!**********************!*\
+  !*** ./app/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("﻿\r\ngetText = function () {\r\n    return \"The world is everything that is the case.\";\r\n}\n\n//# sourceURL=webpack:///./src/lib.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component */ \"./app/component.js\");\n﻿\r\n\r\n\r\n\r\ndocument.body.appendChild(Object(_component__WEBPACK_IMPORTED_MODULE_0__[\"default\"])());\r\n\r\n//require('./lib');\r\n\r\n//document.getElementById(\"skippy\").innerHTML = getText();\n\n//# sourceURL=webpack:///./app/index.js?");
 
 /***/ })
 
