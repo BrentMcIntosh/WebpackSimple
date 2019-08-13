@@ -3,36 +3,53 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const merge = require('webpack-merge');
+
+const parts = require('./webpack.parts');
+
 const PATHS = {
-
     app: path.join(__dirname, 'app'),
-
-    build: path.resolve(__dirname, 'wwwroot/dist')
+    build: path.join(__dirname, 'build'),
 };
 
-module.exports = {
+const commonConfig = merge([
+    {
+        mode: 'development',
 
-    mode: 'development',
 
-    entry: {
-
-        app: PATHS.app
-
+        entry: {
+            app: PATHS.app,
+        },
+        output: {
+            path: PATHS.build,
+            filename: '[name].js',
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                title: 'Webpack demo',
+            }),
+        ],
     },
+    parts.lintJavaScript({ include: PATHS.app }),
+]);
 
-    output: {
+const productionConfig = merge([
+]);
 
-        path: PATHS.build,
+const developmentConfig = merge([
+    parts.devServer({
+        // Customize host/ port here if needed
+        host: process.env.HOST,
+        port: process.env.PORT,
+    }),
+]);
 
-        filename: '[name].js',
+module.exports = (env) => {
 
-    },
 
-    plugins: [
+    if (env === 'production') {
+        return merge(commonConfig, productionConfig);
+    }
 
-        new HtmlWebpackPlugin({
-            title: 'Webpack Demo'
-        })
-
-    ]
+    return merge(commonConfig, developmentConfig);
 };
