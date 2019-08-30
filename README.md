@@ -1,5 +1,9 @@
 # WebpackSimple
 
+Code Splitting
+
+https://survivejs.com/webpack/building/code-splitting/
+
 download zip or clone 
 
 open WebpackSimple.csproj in Visual Studio
