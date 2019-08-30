@@ -7,7 +7,18 @@ module.exports = {
 
     output: {
 
-        path: path.resolve(__dirname, 'wwwroot/dist')
+        path: path.resolve(__dirname, 'wwwroot/dist'),
 
+        publicPath: '/dist/'
+    },
+
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader'
+            }
+        }]
     }
 };

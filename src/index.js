@@ -1,4 +1,11 @@
 ﻿
-require('./lib');
+import("./component")
+    .then(component => {
 
-document.getElementById("skippy").innerHTML = getText();
+        var child = component.default();
+
+        document.body.appendChild(child);
+    })
+    .catch(err => {
+        console.error(err);
+    });
